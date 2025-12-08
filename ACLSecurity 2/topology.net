@@ -1,0 +1,305 @@
+autostart = False
+version = 0.8.6
+[127.0.0.1:7202]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10201
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R5]]
+        console = 2105
+        aux = 2505
+        cnfg = configs\R5.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R3 f1/1
+        x = -384.0
+        y = -390.0
+        z = 1.0
+    [[ROUTER R6]]
+        console = 2106
+        aux = 2506
+        cnfg = configs\R6.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R3 f2/0
+        x = -90.0
+        y = -416.0
+        z = 1.0
+[127.0.0.1:7203]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10301
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R7]]
+        console = 2107
+        aux = 2507
+        cnfg = configs\R7.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R3 f2/1
+        x = 231.0
+        y = -406.0
+        z = 1.0
+    [[ROUTER R8]]
+        console = 2108
+        aux = 2508
+        cnfg = configs\R8.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R2 f1/1
+        x = 521.0
+        y = -127.0
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10001
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2101
+        aux = 2501
+        cnfg = configs\R1.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R4 f1/0
+        f1/1 = SW1 4
+        x = -372.0
+        y = 86.0
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2102
+        aux = 2502
+        cnfg = configs\R2.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R4 f1/1
+        f1/1 = R8 f1/0
+        slot2 = PA-2FE-TX
+        f2/0 = R9 f1/0
+        f2/1 = R10 f1/0
+        x = 211.0
+        y = 83.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10101
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        console = 2104
+        aux = 2504
+        cnfg = configs\R4.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R1 f1/0
+        f1/1 = R2 f1/0
+        slot2 = PA-2FE-TX
+        f2/0 = R3 f1/0
+        x = -89.0
+        y = 81.0
+        z = 1.0
+        hx = 33.5
+        hy = 47.0
+    [[ROUTER R3]]
+        console = 2103
+        aux = 2503
+        cnfg = configs\R3.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R4 f2/0
+        f1/1 = R5 f1/0
+        slot2 = PA-2FE-TX
+        f2/0 = R6 f1/0
+        f2/1 = R7 f1/0
+        x = -85.0
+        y = -155.0
+        z = 1.0
+        hx = 50.5
+        hy = 37.0
+[127.0.0.1:7206]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10601
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R13]]
+        console = 2113
+        aux = 2513
+        cnfg = configs\R13.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW1 3
+        x = -644.0
+        y = 307.0
+        z = 1.0
+[127.0.0.1:7204]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10401
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R9]]
+        console = 2109
+        aux = 2509
+        cnfg = configs\R9.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R2 f2/0
+        x = 531.0
+        y = 85.0
+        z = 1.0
+    [[ROUTER R10]]
+        console = 2110
+        aux = 2510
+        cnfg = configs\R10.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R2 f2/1
+        x = 502.0
+        y = 326.0
+        z = 1.0
+[127.0.0.1:7205]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10501
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R12]]
+        console = 2112
+        aux = 2512
+        cnfg = configs\R12.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW1 2
+        x = -736.0
+        y = 95.0
+        z = 1.0
+    [[ROUTER R11]]
+        console = 2111
+        aux = 2511
+        cnfg = configs\R11.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW1 1
+        x = -702.0
+        y = -149.0
+        z = 1.0
+    [[ETHSW SW1]]
+        1 = access 1 R11 f1/0
+        2 = access 1 R12 f1/0
+        3 = access 1 R13 f1/0
+        4 = access 1 R1 f1/1
+        x = -556.5
+        y = 96.0
+        z = 1.0
+        hx = 14.0
+        hy = 626.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "DATA CENTER"
+        x = -276.0
+        y = -423.0
+        font = "MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0"
+    [[NOTE 2]]
+        text = "7.0.0.0/8"
+        x = 99.0
+        y = -250.0
+    [[NOTE 3]]
+        text = "172.23.0.0/16\n151.1.0.0/16\n215.1.20.0/24"
+        x = 613.0
+        y = 69.0
+    [[NOTE 4]]
+        text = "10.4.4.0/24\n172.29.0.0/16\n192.168.0.0/24"
+        x = 603.0
+        y = 290.0
+    [[NOTE 5]]
+        text = "192.168.210.0/24\n192.168.211.0/24\n197.1.1.0/24\n198.2.2.0/24"
+        x = -849.237590053
+        y = 271.399061661
+    [[NOTE 6]]
+        text = "SITE B"
+        x = 364.0
+        y = -199.0
+        font = "MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0"
+    [[NOTE 7]]
+        text = "1.0.0.0/8"
+        x = -469.0
+        y = -52.0
+    [[NOTE 8]]
+        text = "10.3.3.0/24\n91.0.0.0/8\n172.22.0.0/16\n192.168.112.0/24"
+        x = 626.0
+        y = -154.0
+    [[NOTE 9]]
+        text = "9.0.0.0/8"
+        x = 339.0
+        y = 71.0
+    [[NOTE 10]]
+        text = "11.0.0.0/8"
+        x = 284.0
+        y = 239.0
+    [[NOTE 11]]
+        text = "6.0.0.0/8"
+        x = -52.0
+        y = -302.0
+    [[NOTE 12]]
+        text = "EIGRP 100"
+        x = -97.0
+        y = 288.0
+        font = "MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0"
+    [[NOTE 13]]
+        text = "2.0.0.0/8"
+        x = -236.0
+        y = 70.0
+    [[NOTE 14]]
+        text = "SITE A"
+        x = -548.0
+        y = -224.0
+        font = "MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0"
+    [[NOTE 15]]
+        text = "4.0.0.0/8"
+        x = -53.0
+        y = -24.0
+    [[NOTE 16]]
+        text = "172.16.0.0/16\n172.30.0.0/16\n190.1.0.0/16"
+        x = -903.923881554
+        y = 46.7350647363
+    [[NOTE 17]]
+        text = "10.1.1.0/24\n10.2.2.0/24\n101.0.0.0/8\n102.0.0.0/8"
+        x = -851.509667992
+        y = -187.828427125
+    [[NOTE 18]]
+        text = "5.0.0.0/8"
+        x = -335.0
+        y = -258.0
+    [[NOTE 19]]
+        text = "3.0.0.0/8"
+        x = 25.0
+        y = 75.0
+    [[NOTE 20]]
+        text = "8.0.0.0/8"
+        x = 304.0
+        y = -49.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -921.0
+        y = -186.0
+        width = 662.0
+        height = 563.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -412.0
+        y = -438.0
+        width = 745.0
+        height = 352.0
+    [[SHAPE 3]]
+        type = rectangle
+        x = 148.0
+        y = -159.0
+        width = 739.0
+        height = 538.0

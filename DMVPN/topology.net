@@ -1,0 +1,319 @@
+autostart = False
+version = 0.8.6
+[127.0.0.1:7202]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10201
+    [[7200]]
+        image = C:\Users\hp\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R5]]
+        console = 2105
+        aux = 2505
+        cnfg = configs\R5.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = ISP f2/1
+        f1/1 = R6 f1/0
+        x = -443.0
+        y = -269.0
+        z = 1.0
+    [[ROUTER R6]]
+        console = 2106
+        aux = 2506
+        cnfg = configs\R6.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R5 f1/1
+        f1/1 = ISP1 f1/0
+        slot2 = PA-2FE-TX
+        x = 310.0
+        y = -268.0
+        z = 1.0
+[127.0.0.1:7203]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10301
+    [[7200]]
+        image = C:\Users\hp\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER ISP1]]
+        console = 2107
+        aux = 2507
+        cnfg = configs\ISP1.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R6 f1/1
+        f1/1 = R8 f1/0
+        slot2 = PA-2FE-TX
+        f2/0 = R10 f1/0
+        f2/1 = R9 f1/0
+        slot3 = PA-2FE-TX
+        x = 316.0
+        y = -14.0
+        z = 1.0
+    [[ROUTER R8]]
+        console = 2108
+        aux = 2508
+        cnfg = configs\R8.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = ISP1 f1/1
+        x = 63.0
+        y = 237.0
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10001
+    [[7200]]
+        image = C:\Users\hp\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2101
+        aux = 2501
+        cnfg = configs\R1.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = ISP f1/0
+        x = -705.0
+        y = 253.0
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2102
+        aux = 2502
+        cnfg = configs\R2.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = ISP f1/1
+        x = -451.0
+        y = 255.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10101
+    [[7200]]
+        image = C:\Users\hp\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R3]]
+        console = 2103
+        aux = 2503
+        cnfg = configs\R3.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = ISP f2/0
+        x = -214.0
+        y = 260.0
+        z = 1.0
+    [[ROUTER ISP]]
+        console = 2104
+        aux = 2504
+        cnfg = configs\ISP.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R1 f1/0
+        f1/1 = R2 f1/0
+        slot2 = PA-2FE-TX
+        f2/0 = R3 f1/0
+        f2/1 = R5 f1/0
+        x = -449.0
+        y = -17.0
+        z = 1.0
+[127.0.0.1:7204]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10401
+    [[7200]]
+        image = C:\Users\hp\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R9]]
+        console = 2109
+        aux = 2509
+        cnfg = configs\R9.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = ISP1 f2/1
+        x = 597.0
+        y = 236.0
+        z = 1.0
+    [[ROUTER R10]]
+        console = 2110
+        aux = 2510
+        cnfg = configs\R10.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = ISP1 f2/0
+        x = 331.0
+        y = 263.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "DMVPN\n192.168.112.0/24\neigrp 144"
+        x = 562.0
+        y = -44.0
+        color = "#e71401"
+    [[NOTE 2]]
+        text = "DMVPN\n192.168.111.0/24\neigrp 143"
+        x = -848.0
+        y = -65.0
+        color = "#e71401"
+    [[NOTE 3]]
+        text = "2.0.0.30/30"
+        x = 92.0
+        y = 97.0
+    [[NOTE 4]]
+        text = "2.0.0.28/30"
+        x = 231.0
+        y = 144.0
+    [[NOTE 5]]
+        text = "2.0.0.24/30"
+        x = 447.0
+        y = 70.0
+    [[NOTE 6]]
+        text = "172.23.0.0/16"
+        x = 572.0
+        y = 293.0
+    [[NOTE 7]]
+        text = "2.0.0.20/30"
+        x = 381.0
+        y = -153.0
+    [[NOTE 8]]
+        text = "172.22.0.0/16"
+        x = 279.0
+        y = 307.0
+    [[NOTE 9]]
+        text = "172.21.0.0/16"
+        x = 5.0
+        y = 302.0
+    [[NOTE 10]]
+        text = "192.168.103.0/24"
+        x = -243.0
+        y = 309.0
+    [[NOTE 11]]
+        text = "192.168.102.0/24"
+        x = -488.0
+        y = 304.0
+    [[NOTE 12]]
+        text = "192.168.101.0/24"
+        x = -769.0
+        y = 301.0
+    [[NOTE 13]]
+        text = "1.0.0.16/30"
+        x = -678.0
+        y = 89.0
+    [[NOTE 14]]
+        text = "1.0.0.12/30"
+        x = -517.0
+        y = 126.0
+    [[NOTE 15]]
+        text = "1.0.0.8/30"
+        x = -303.0
+        y = 105.0
+    [[NOTE 16]]
+        text = "1.0.0.4/30"
+        x = -403.0
+        y = -148.0
+    [[NOTE 17]]
+        text = "ospf \n200.0.0.0/8 "
+        x = -91.0
+        y = -245.0
+    [[NOTE 18]]
+        text = "NHS "
+        x = 382.0
+        y = -279.0
+    [[NOTE 19]]
+        text = "NHS "
+        x = -499.0
+        y = -266.0
+    [[NOTE 20]]
+        text = "IBM "
+        x = -536.0
+        y = -318.0
+    [[NOTE 21]]
+        text = "f1/0"
+        x = 34.8371039331
+        y = -44.9414807012
+        interface = R10 f1/0
+    [[NOTE 22]]
+        text = "f1/0"
+        x = -19.8846345482
+        y = -51.5877531567
+        interface = R9 f1/0
+    [[NOTE 23]]
+        text = "f1/0"
+        x = 61.3962868412
+        y = -6.17181026541
+        interface = R8 f1/0
+    [[NOTE 24]]
+        text = "f1/0"
+        x = 29.0553816225
+        y = -61.988844646
+        interface = ISP1 f1/0
+    [[NOTE 25]]
+        text = "f2/1"
+        x = 77.8846345482
+        y = 24.5877531567
+        interface = ISP1 f2/1
+    [[NOTE 26]]
+        text = "f2/0"
+        x = -11.8371039331
+        y = 68.9414807012
+        interface = ISP1 f2/0
+    [[NOTE 27]]
+        text = "f1/1"
+        x = -65.3962868412
+        y = 28.1718102654
+        interface = ISP1 f1/1
+    [[NOTE 28]]
+        text = "f1/1"
+        x = -28.0553816225
+        y = 48.988844646
+        interface = R6 f1/1
+    [[NOTE 29]]
+        text = "f1/0"
+        x = -56.9999647272
+        y = -12.0531208031
+        interface = R6 f1/0
+    [[NOTE 30]]
+        text = "f1/0"
+        x = 32.0478888821
+        y = 61.9886669498
+        interface = R5 f1/0
+    [[NOTE 31]]
+        text = "f1/1"
+        x = 72.9999647272
+        y = -10.9468791969
+        interface = R5 f1/1
+    [[NOTE 32]]
+        text = "f2/1"
+        x = 37.9521111179
+        y = -54.9886669498
+        interface = ISP f2/1
+    [[NOTE 33]]
+        text = "f2/0"
+        x = 73.8771577721
+        y = 39.5020115015
+        interface = ISP f2/0
+    [[NOTE 34]]
+        text = "f1/0"
+        x = -70.5217113446
+        y = 27.0268049338
+        interface = ISP f1/0
+    [[NOTE 35]]
+        text = "f1/1"
+        x = -1.29410969654
+        y = 68.998918729
+        interface = ISP f1/1
+    [[NOTE 36]]
+        text = "f1/0"
+        x = -9.87715777206
+        y = -50.5020115015
+        interface = R3 f1/0
+    [[NOTE 37]]
+        text = "f1/0"
+        x = 33.2941096965
+        y = -52.998918729
+        interface = R2 f1/0
+    [[NOTE 38]]
+        text = "f1/0"
+        x = 62.5217113446
+        y = -19.0268049338
+        interface = R1 f1/0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -540.0
+        y = -319.0
+        width = 1020.0
+        height = 215.0

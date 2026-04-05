@@ -1,0 +1,84 @@
+autostart = False
+version = 0.8.6
+[127.0.0.1:7202]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10004
+    [[7200]]
+        image = F:\ALL GNS INFO\GNS\c7200-a3jk9s-mz.124-25g.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2104
+        aux = 2503
+        cnfg = configs\R1.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R2 f1/0
+        x = -729.781745931
+        y = -220.313708499
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2105
+        aux = 2504
+        cnfg = configs\R2.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R1 f1/0
+        f1/1 = R3 f1/0
+        x = -226.379725677
+        y = -217.798989873
+        z = 1.0
+[127.0.0.1:7203]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10104
+    [[7200]]
+        image = F:\ALL GNS INFO\GNS\c7200-a3jk9s-mz.124-25g.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R3]]
+        console = 2106
+        aux = 2505
+        cnfg = configs\R3.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R2 f1/1
+        x = 301.093362388
+        y = -222.384776311
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    m11 = 1.0
+    m22 = 1.0
+    [[NOTE 1]]
+        text = "172.16.0.0/16\n172.17.0.0/16\n172.18.0.0/16"
+        x = 381.837661841
+        y = -310.271644663
+    [[NOTE 2]]
+        text = "192.168.1.0/24\n192.168.2.0/24\n192.168.3.0/24"
+        x = -864.08448661
+        y = -324.21277016
+    [[NOTE 3]]
+        text = "190.1.0.4/30"
+        x = -39.5979797464
+        y = -242.188383542
+    [[NOTE 4]]
+        text = "190.1.0.0/30"
+        x = -588.312841947
+        y = -249.259451354
+    [[NOTE 5]]
+        text = "f1/0"
+        x = -6.99848841555
+        y = 22.3477419604
+        interface = R3 f1/0
+    [[NOTE 6]]
+        text = "f1/1"
+        x = 72.9984884156
+        y = 21.6522580396
+        interface = R2 f1/1
+    [[NOTE 7]]
+        text = "f1/0"
+        x = -43.9995009193
+        y = 25.8001845723
+        interface = R2 f1/0
+    [[NOTE 8]]
+        text = "f1/0"
+        x = 72.9995009193
+        y = 22.1998154277
+        interface = R1 f1/0

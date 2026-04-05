@@ -1,0 +1,173 @@
+autostart = False
+version = 0.8.6
+[qemu 127.0.0.1:10525]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 40000
+    qemupath = qemu.exe
+    qemuimgpath = qemu-img.exe
+    [[525]]
+        image = C:\Users\HP\Downloads\FIREWALL\pix803.bin
+        ram = 128
+        netcard = e1000
+        serial = 0x301D10D9
+        key = 0x5236f5a7,0x97def6da,0x732a91f5,0xf5deef57
+    [[PIX PIX1]]
+        e0 = R2 f0/0
+        e1 = R1 f0/0
+        e2 = R3 f0/0
+        e3 = SW1 1
+        x = -310.0
+        y = -56.0
+        z = 1.0
+        hx = 59.0
+        hy = -22.0
+[127.0.0.1:7200]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10001
+    [[3725]]
+        image = C:\Users\HP\Downloads\gns\c3725-adventerprisek9-mz124-15.image
+        ram = 128
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        model = 3725
+        console = 2103
+        aux = 2504
+        cnfg = configs\R4.cfg
+        f0/0 = SW1 2
+        x = -491.0
+        y = 296.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3725
+        console = 2100
+        aux = 2501
+        cnfg = configs\R1.cfg
+        f0/0 = PIX1 e1
+        x = -749.0
+        y = -58.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3725
+        console = 2101
+        aux = 2502
+        cnfg = configs\R2.cfg
+        f0/0 = PIX1 e0
+        x = -309.0
+        y = -371.0
+        z = 1.0
+        hx = 21.0
+        hy = -27.0
+    [[ROUTER R3]]
+        model = 3725
+        console = 2102
+        aux = 2503
+        cnfg = configs\R3.cfg
+        f0/0 = PIX1 e2
+        x = 303.0
+        y = -49.0
+        z = 1.0
+    [[ETHSW SW1]]
+        1 = access 1 PIX1 e3
+        2 = access 1 R4 f0/0
+        3 = access 1 R5 f0/0
+        x = -315.5
+        y = 190.0
+        z = 1.0
+        hx = -3.0
+        hy = 403.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10101
+    [[3725]]
+        image = C:\Users\HP\Downloads\gns\c3725-adventerprisek9-mz124-15.image
+        ram = 128
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R5]]
+        model = 3725
+        console = 2104
+        aux = 2505
+        cnfg = configs\R5.cfg
+        f0/0 = SW1 3
+        x = -122.0
+        y = 300.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "DMZ1-50"
+        x = 21.0
+        y = -11.0
+        color = "#0055ff"
+    [[NOTE 2]]
+        text = "DMZ2-50"
+        x = -554.0
+        y = -8.0
+        color = "#0055ff"
+    [[NOTE 3]]
+        text = "Inside-100"
+        x = -250.0
+        y = 109.0
+        color = "#0055ff"
+    [[NOTE 4]]
+        text = "Outside-0"
+        x = -269.0
+        y = -145.0
+        color = "#0055ff"
+    [[NOTE 5]]
+        text = "OSPF 1/AREA 111"
+        x = -594.0
+        y = -71.0
+        color = "#ff0000"
+    [[NOTE 6]]
+        text = "OSPF 1/AREA 111"
+        x = -25.0
+        y = -65.0
+        color = "#ff0000"
+    [[NOTE 7]]
+        text = "EIGRP 111"
+        x = -247.0
+        y = 87.0
+        color = "#ff0000"
+    [[NOTE 8]]
+        text = "RIP"
+        x = -264.0
+        y = -166.0
+        color = "#ff0000"
+    [[NOTE 9]]
+        text = "11.0.0.0/8"
+        x = -522.0
+        y = 337.0
+    [[NOTE 10]]
+        text = "192.1.3.0/24\n192.1.13.0/24"
+        x = 373.0
+        y = -79.0
+    [[NOTE 11]]
+        text = "192.168.3.64/27"
+        x = -591.0
+        y = -37.0
+    [[NOTE 12]]
+        text = "192.1.4.0/24\n192.1.14.0/24"
+        x = -886.0
+        y = -104.0
+    [[NOTE 13]]
+        text = "22.0.0.0/8"
+        x = -139.0
+        y = 342.0
+    [[NOTE 14]]
+        text = "192.168.3.0/27"
+        x = -17.0
+        y = -32.0
+    [[NOTE 15]]
+        text = "192.1.10.0/24"
+        x = -277.0
+        y = -209.0
+    [[NOTE 16]]
+        text = "13.0.0.0/8\n33.0.0.0/8"
+        x = -435.0
+        y = -398.0
+    [[NOTE 17]]
+        text = "172.16.0.0/16"
+        x = -264.0
+        y = 129.0

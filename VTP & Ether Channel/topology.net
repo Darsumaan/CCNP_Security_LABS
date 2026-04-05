@@ -1,0 +1,777 @@
+autostart = False
+version = 0.8.6
+[127.0.0.1:7202]
+    workingdir = C:\Users\anans\AppData\Local\Temp
+    udp = 10201
+    [[3725]]
+        image = C:\Users\anans\OneDrive\Desktop\gns\c3725-adventerprisek9-mz124-15.image
+        ram = 128
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R12]]
+        model = 3725
+        console = 2112
+        aux = 2512
+        cnfg = configs\R12.cfg
+        f0/0 = R2 f1/4
+        symbol = computer
+        x = -471.8355698
+        y = -230.402020254
+        z = 1.0
+    [[ROUTER R10]]
+        model = 3725
+        console = 2110
+        aux = 2510
+        cnfg = configs\R10.cfg
+        f0/0 = R1 f1/3
+        symbol = computer
+        x = -863.953318806
+        y = -218.159379566
+        z = 1.0
+    [[ROUTER R11]]
+        model = 3725
+        console = 2111
+        aux = 2511
+        cnfg = configs\R11.cfg
+        f0/0 = R1 f1/4
+        symbol = computer
+        x = -845.083261121
+        y = 51.0243866176
+        z = 1.0
+    [[ROUTER R9]]
+        model = 3725
+        console = 2109
+        aux = 2509
+        cnfg = configs\R9.cfg
+        f0/0 = R2 f1/3
+        f0/1 = R5 f1/2
+        slot1 = NM-1FE-TX
+        f1/0 = R8 f1/1
+        slot2 = NM-1FE-TX
+        f2/0 = R3 f1/2
+        x = -93.5857864376
+        y = -121.585786438
+        z = 1.0
+        hx = 54.5979797464
+        hy = -25.0
+[127.0.0.1:7203]
+    workingdir = C:\Users\anans\AppData\Local\Temp
+    udp = 10301
+    [[3725]]
+        image = C:\Users\anans\OneDrive\Desktop\gns\c3725-adventerprisek9-mz124-15.image
+        ram = 128
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R16]]
+        model = 3725
+        console = 2116
+        aux = 2516
+        cnfg = configs\R16.cfg
+        f0/0 = R3 f1/3
+        symbol = computer
+        x = -304.74011537
+        y = 133.823376491
+        z = 1.0
+    [[ROUTER R14]]
+        model = 3725
+        console = 2114
+        aux = 2514
+        cnfg = configs\R14.cfg
+        f0/0 = R4 f1/2
+        symbol = computer
+        x = -367.007142675
+        y = 525.362481734
+        z = 1.0
+    [[ROUTER R15]]
+        model = 3725
+        console = 2115
+        aux = 2515
+        cnfg = configs\R15.cfg
+        f0/0 = R4 f1/3
+        symbol = computer
+        x = 226.350288426
+        y = 520.87720036
+        z = 1.0
+    [[ROUTER R13]]
+        model = 3725
+        console = 2113
+        aux = 2513
+        cnfg = configs\R13.cfg
+        f0/0 = R2 f1/5
+        symbol = computer
+        x = -491.462986797
+        y = 110.45941546
+        z = 1.0
+        hx = 8.0
+        hy = -37.0208152802
+[127.0.0.1:7200]
+    workingdir = C:\Users\anans\AppData\Local\Temp
+    udp = 10001
+    [[3725]]
+        image = C:\Users\anans\OneDrive\Desktop\gns\c3725-adventerprisek9-mz124-15.image
+        ram = 128
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        model = 3725
+        console = 2104
+        aux = 2504
+        cnfg = configs\R4.cfg
+        slot1 = NM-16ESW
+        f1/0 = R3 f1/0
+        f1/1 = R3 f1/1
+        f1/2 = R14 f0/0
+        f1/3 = R15 f0/0
+        symbol = EtherSwitch router
+        x = -93.9852813742
+        y = 387.761976671
+        z = 1.0
+        hx = 7.5
+        hy = 47.124891681
+    [[ROUTER R1]]
+        model = 3725
+        console = 2101
+        aux = 2501
+        cnfg = configs\R1.cfg
+        slot1 = NM-16ESW
+        f1/0 = R2 f1/0
+        f1/1 = R2 f1/1
+        f1/2 = R2 f1/2
+        f1/3 = R10 f0/0
+        f1/4 = R11 f0/0
+        symbol = EtherSwitch router
+        x = -588.5
+        y = -128.5
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3725
+        console = 2102
+        aux = 2502
+        cnfg = configs\R2.cfg
+        slot1 = NM-16ESW
+        f1/0 = R1 f1/0
+        f1/1 = R1 f1/1
+        f1/2 = R1 f1/2
+        f1/3 = R9 f0/0
+        f1/4 = R12 f0/0
+        f1/5 = R13 f0/0
+        symbol = EtherSwitch router
+        x = -318.5
+        y = -122.5
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3725
+        console = 2103
+        aux = 2503
+        cnfg = configs\R3.cfg
+        slot1 = NM-16ESW
+        f1/0 = R4 f1/0
+        f1/1 = R4 f1/1
+        f1/2 = R9 f2/0
+        f1/3 = R16 f0/0
+        f1/4 = R17 f0/0
+        symbol = EtherSwitch router
+        x = -84.6715728753
+        y = 60.4116882454
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\anans\AppData\Local\Temp
+    udp = 10101
+    [[3725]]
+        image = C:\Users\anans\OneDrive\Desktop\gns\c3725-adventerprisek9-mz124-15.image
+        ram = 128
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R5]]
+        model = 3725
+        console = 2105
+        aux = 2505
+        cnfg = configs\R5.cfg
+        slot1 = NM-16ESW
+        f1/0 = R6 f1/0
+        f1/1 = R6 f1/2
+        f1/2 = R9 f0/1
+        f1/3 = R18 f0/0
+        f1/4 = R23 f0/0
+        symbol = EtherSwitch router
+        x = 163.5
+        y = -131.5
+        z = 1.0
+    [[ROUTER R6]]
+        model = 3725
+        console = 2106
+        aux = 2506
+        cnfg = configs\R6.cfg
+        slot1 = NM-16ESW
+        f1/0 = R5 f1/0
+        f1/2 = R5 f1/1
+        symbol = EtherSwitch router
+        x = 453.5
+        y = -137.5
+        z = 1.0
+    [[ROUTER R7]]
+        model = 3725
+        console = 2107
+        aux = 2507
+        cnfg = configs\R7.cfg
+        slot1 = NM-16ESW
+        f1/0 = R8 f1/0
+        f1/1 = R21 f0/0
+        f1/2 = R22 f0/0
+        symbol = EtherSwitch router
+        x = -85.5
+        y = -414.5
+        z = 1.0
+    [[ROUTER R8]]
+        model = 3725
+        console = 2108
+        aux = 2508
+        cnfg = configs\R8.cfg
+        slot1 = NM-16ESW
+        f1/0 = R7 f1/0
+        f1/1 = R9 f1/0
+        f1/2 = R19 f0/0
+        f1/3 = R20 f0/0
+        symbol = EtherSwitch router
+        x = -88.5
+        y = -238.5
+        z = 1.0
+[127.0.0.1:7206]
+    workingdir = C:\Users\anans\AppData\Local\Temp
+    udp = 10601
+    [[3725]]
+        image = C:\Users\anans\OneDrive\Desktop\gns\c3725-adventerprisek9-mz124-15.image
+        ram = 128
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R23]]
+        model = 3725
+        console = 2123
+        aux = 2524
+        cnfg = configs\R23.cfg
+        f0/0 = R5 f1/4
+        symbol = computer
+        x = 286.612265097
+        y = 24.6690475583
+        z = 1.0
+[127.0.0.1:7204]
+    workingdir = C:\Users\anans\AppData\Local\Temp
+    udp = 10401
+    [[3725]]
+        image = C:\Users\anans\OneDrive\Desktop\gns\c3725-adventerprisek9-mz124-15.image
+        ram = 128
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R17]]
+        model = 3725
+        console = 2117
+        aux = 2517
+        cnfg = configs\R17.cfg
+        f0/0 = R3 f1/4
+        symbol = computer
+        x = 112.970562748
+        y = 123.308657865
+        z = 1.0
+    [[ROUTER R18]]
+        model = 3725
+        console = 2118
+        aux = 2518
+        cnfg = configs\R18.cfg
+        f0/0 = R5 f1/3
+        symbol = computer
+        x = 339.161471607
+        y = -311.798989873
+        z = 1.0
+    [[ROUTER R19]]
+        model = 3725
+        console = 2119
+        aux = 2519
+        cnfg = configs\R19.cfg
+        f0/0 = R8 f1/2
+        symbol = computer
+        x = -299.769552622
+        y = -346.201010127
+        z = 1.0
+    [[ROUTER R20]]
+        model = 3725
+        console = 2120
+        aux = 2520
+        cnfg = configs\R20.cfg
+        f0/0 = R8 f1/3
+        symbol = computer
+        x = 77.4621202459
+        y = -356.518902708
+        z = 1.0
+[127.0.0.1:7205]
+    workingdir = C:\Users\anans\AppData\Local\Temp
+    udp = 10501
+    [[3725]]
+        image = C:\Users\anans\OneDrive\Desktop\gns\c3725-adventerprisek9-mz124-15.image
+        ram = 128
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R22]]
+        model = 3725
+        console = 2122
+        aux = 2522
+        cnfg = configs\R22.cfg
+        f0/0 = R7 f1/2
+        symbol = computer
+        x = 113.413347011
+        y = -581.378859125
+        z = 1.0
+    [[ROUTER R21]]
+        model = 3725
+        console = 2121
+        aux = 2521
+        cnfg = configs\R21.cfg
+        f0/0 = R7 f1/1
+        symbol = computer
+        x = -317.512626585
+        y = -571.479364189
+        z = 1.0
+        hx = 13.4142135624
+        hy = -26.4142135624
+[GNS3-DATA]
+    configs = configs
+    m11 = 0.707106781187
+    m22 = 0.707106781187
+    [[NOTE 1]]
+        text = "VTP-SERVER\nCCNP"
+        x = 80.6101730553
+        y = -179.237590053
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+        color = "#00aa00"
+    [[NOTE 2]]
+        text = "50"
+        x = -663.266160753
+        y = -33.1715728753
+    [[NOTE 3]]
+        text = "50"
+        x = -359.210244843
+        y = -82.6690475583
+        color = "#ff0000"
+    [[NOTE 4]]
+        text = "VTP-CLIENT\nCCNP"
+        x = 424.264068712
+        y = -217.622366364
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+        color = "#00aa00"
+    [[NOTE 5]]
+        text = "40"
+        x = -683.065150626
+        y = -136.208152802
+        color = "#ff0000"
+    [[NOTE 6]]
+        text = "62"
+        x = -25.4558441227
+        y = -386.925973595
+    [[NOTE 7]]
+        text = "62"
+        x = -12.7279220614
+        y = -302.073159853
+        color = "#ff0000"
+    [[NOTE 8]]
+        text = "40"
+        x = -417.1930009
+        y = -139.43860018
+    [[NOTE 9]]
+        text = "55"
+        x = -140.007142675
+        y = -388.139177031
+        color = "#ff0000"
+    [[NOTE 10]]
+        text = "55"
+        x = -123.036579926
+        y = -295.203102168
+    [[NOTE 11]]
+        text = "ETHER-CHANNEL"
+        x = 294.0
+        y = -79.0
+        font = "MS Shell Dlg 2,6,-1,5,75,0,0,0,0,0"
+        color = "#0055ff"
+    [[NOTE 12]]
+        text = "Stick-model"
+        x = -52.3431457505
+        y = -165.757359313
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+        color = "#aa55ff"
+    [[NOTE 13]]
+        text = "VTP-CLIENT\nCISCO"
+        x = -57.9827560573
+        y = 273.71277016
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+        color = "#00aa00"
+    [[NOTE 14]]
+        text = "ETHER-CHANNEL"
+        x = -56.7249634685
+        y = 210.71277016
+        font = "MS Shell Dlg 2,6,-1,5,75,0,0,0,0,0"
+        color = "#0055ff"
+    [[NOTE 15]]
+        text = "Stick-model"
+        x = -177.0
+        y = -45.0
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+        color = "#aa55ff"
+    [[NOTE 16]]
+        text = "VTP-CLIENT\nCCIE"
+        x = -330.925973595
+        y = -40.2426406871
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+        color = "#00aa00"
+    [[NOTE 17]]
+        text = "Stick-model"
+        x = -232.0
+        y = -132.0
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+        color = "#aa55ff"
+    [[NOTE 18]]
+        text = "VTP-SERVER\nCCIE"
+        x = -606.697618258
+        y = -194.190908859
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+        color = "#00aa00"
+    [[NOTE 19]]
+        text = "RP"
+        x = -467.397582365
+        y = -100.346717088
+    [[NOTE 20]]
+        text = "33"
+        x = 168.291413922
+        y = -74.7867965643
+    [[NOTE 21]]
+        text = "144"
+        x = -175.362481734
+        y = 385.033621334
+    [[NOTE 22]]
+        text = "155"
+        x = -22.627416998
+        y = 62.5929291126
+        color = "#ff0000"
+    [[NOTE 23]]
+        text = "22"
+        x = 496.388960393
+        y = -171.965512115
+        color = "#ff0000"
+    [[NOTE 24]]
+        text = "155"
+        x = -32.5269119346
+        y = 387.661038332
+    [[NOTE 25]]
+        text = "144"
+        x = -140.007142675
+        y = 61.379725677
+        color = "#ff0000"
+    [[NOTE 26]]
+        text = "L3 Switch"
+        x = 515.0
+        y = -128.0
+        font = "MS Shell Dlg 2,9,-1,5,75,0,0,0,0,0"
+        color = "#00aa00"
+    [[NOTE 27]]
+        text = "22"
+        x = 161.220346111
+        y = -203.279220613
+    [[NOTE 28]]
+        text = "33"
+        x = 492.146319706
+        y = -90.1421356237
+        color = "#ff0000"
+    [[NOTE 29]]
+        text = "2RP"
+        x = -408.000612745
+        y = -64.2842712474
+    [[NOTE 30]]
+        text = "RP"
+        x = -384.666088965
+        y = -149.643181644
+    [[NOTE 31]]
+        text = "2RP"
+        x = -470.93311627
+        y = -141.15790027
+    [[NOTE 32]]
+        text = "Vlan 40 = 10.0.0.0/8 Ospf 1 / Area 172\nVlan 50 = 172.16.0.0/16 Eigrp 172\nVlan 55 = 172.17.0.0/16 Ospf 1 / Area 0\nVlan 62 = 172.18.0.0/16 RIP\nVlan 22 = 172.19.0.0/16 Eigrp 174\nVlan 33 = 172.20.0.0/16 RIP\nVlan 144 = 192.168.1.0/24 Eigrp 197\nVlan 155 = 192.168.2.0/24 Eigrp 144"
+        x = -1042.27539547
+        y = -587.256492761
+        font = "MS Shell Dlg 2,14,-1,5,75,0,0,0,0,0"
+    [[NOTE 33]]
+        text = "VTP-SERVER\nCISCO"
+        x = -42.4264068712
+        y = -7.91673887931
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+        color = "#00aa00"
+    [[NOTE 34]]
+        text = "f0/0"
+        x = -1.07375202378
+        y = 51.2440376896
+        interface = R20 f0/0
+    [[NOTE 35]]
+        text = "f0/0"
+        x = 65.715712329
+        y = 51.7871365249
+        interface = R21 f0/0
+    [[NOTE 36]]
+        text = "f0/0"
+        x = -6.90037793738
+        y = 60.2832782268
+        interface = R22 f0/0
+    [[NOTE 37]]
+        text = "f0/0"
+        x = -61.0154039245
+        y = -16.5702402475
+        interface = R23 f0/0
+    [[NOTE 38]]
+        text = "f1/0"
+        x = -31.4761400496
+        y = -32.1333873919
+        interface = R9 f1/0
+    [[NOTE 39]]
+        text = "f2/0"
+        x = 33.3082705233
+        y = 61.9988120984
+        interface = R9 f2/0
+    [[NOTE 40]]
+        text = "f0/0"
+        x = -60.7399883182
+        y = 27.7576715908
+        interface = R9 f0/0
+    [[NOTE 41]]
+        text = "f0/1"
+        x = 72.9772884197
+        y = 20.6522572171
+        interface = R9 f0/1
+    [[NOTE 42]]
+        text = "f1/3"
+        x = 59.0737520238
+        y = 1.75596231043
+        interface = R8 f1/3
+    [[NOTE 43]]
+        text = "f1/1"
+        x = -31.6462263144
+        y = 47.9349025821
+        interface = R8 f1/1
+    [[NOTE 44]]
+        text = "f1/0"
+        x = 29.0101462779
+        y = -36.2931801888
+        interface = R8 f1/0
+    [[NOTE 45]]
+        text = "f1/2"
+        x = -58.390711882
+        y = 2.84388457931
+        interface = R8 f1/2
+    [[NOTE 46]]
+        text = "f1/2"
+        x = 25.1917294767
+        y = -16.4988120984
+        interface = R3 f1/2
+    [[NOTE 47]]
+        text = "f1/1"
+        x = -40.0325591605
+        y = 74.6553267014
+        interface = R3 f1/1
+    [[NOTE 48]]
+        text = "f1/0"
+        x = 24.3623879232
+        y = 63.483819712
+        interface = R3 f1/0
+    [[NOTE 49]]
+        text = "f1/4"
+        x = 63.4092083336
+        y = 36.2629120313
+        interface = R3 f1/4
+    [[NOTE 50]]
+        text = "f1/3"
+        x = -11.9813729589
+        y = 37.4694910829
+        interface = R3 f1/3
+    [[NOTE 51]]
+        text = "f1/3"
+        x = 65.4998729481
+        y = 23.3991826587
+        interface = R2 f1/3
+    [[NOTE 52]]
+        text = "f1/2"
+        x = -90.9687431678
+        y = 34.6811642096
+        interface = R2 f1/2
+    [[NOTE 53]]
+        text = "f1/1"
+        x = -63.8765181099
+        y = -12.0859201904
+        interface = R2 f1/1
+    [[NOTE 54]]
+        text = "f1/0"
+        x = -90.8576594814
+        y = 18.3686898215
+        interface = R2 f1/0
+    [[NOTE 55]]
+        text = "f1/5"
+        x = 2.68241010955
+        y = 56.3535780638
+        interface = R2 f1/5
+    [[NOTE 56]]
+        text = "f1/4"
+        x = -22.881684216
+        y = -53.0983169655
+        interface = R2 f1/4
+    [[NOTE 57]]
+        text = "f1/2"
+        x = 63.9648298645
+        y = 50.6006388161
+        interface = R1 f1/2
+    [[NOTE 58]]
+        text = "f1/1"
+        x = 64.1869972373
+        y = -13.1370083323
+        interface = R1 f1/1
+    [[NOTE 59]]
+        text = "f1/0"
+        x = 65.4901271133
+        y = 24.3886694914
+        interface = R1 f1/0
+    [[NOTE 60]]
+        text = "f1/4"
+        x = -33.472441272
+        y = 60.0908005139
+        interface = R1 f1/4
+    [[NOTE 61]]
+        text = "f1/3"
+        x = -60.771855678
+        y = -32.241513078
+        interface = R1 f1/3
+    [[NOTE 62]]
+        text = "f1/2"
+        x = 57.0203023499
+        y = -1.12662258147
+        interface = R7 f1/2
+    [[NOTE 63]]
+        text = "f1/1"
+        x = -78.4263904476
+        y = -14.3434857109
+        interface = R7 f1/1
+    [[NOTE 64]]
+        text = "f1/0"
+        x = 24.8182808469
+        y = 63.4941903155
+        interface = R7 f1/0
+    [[NOTE 65]]
+        text = "f1/2"
+        x = -23.080149027
+        y = 49.0269637557
+        interface = R6 f1/2
+    [[NOTE 66]]
+        text = "f1/0"
+        x = -34.2904313842
+        y = -11.0279299246
+        interface = R6 f1/0
+    [[NOTE 67]]
+        text = "f1/4"
+        x = 50.5320057441
+        y = 54.6993379485
+        interface = R5 f1/4
+    [[NOTE 68]]
+        text = "f1/2"
+        x = -48.4184139166
+        y = 31.9188105948
+        interface = R5 f1/2
+    [[NOTE 69]]
+        text = "f1/1"
+        x = 63.9738018067
+        y = 27.573155613
+        interface = R5 f1/1
+    [[NOTE 70]]
+        text = "f1/0"
+        x = 66.9056550733
+        y = -15.5111753188
+        interface = R5 f1/0
+    [[NOTE 71]]
+        text = "f1/3"
+        x = 23.3262459915
+        y = -42.2978477208
+        interface = R5 f1/3
+    [[NOTE 72]]
+        text = "f1/1"
+        x = -95.7400910641
+        y = -43.4960789067
+        interface = R4 f1/1
+    [[NOTE 73]]
+        text = "f1/0"
+        x = 47.8508155124
+        y = -44.7680909595
+        interface = R4 f1/0
+    [[NOTE 74]]
+        text = "f1/3"
+        x = 62.3133336363
+        y = 39.1453976165
+        interface = R4 f1/3
+    [[NOTE 75]]
+        text = "f1/2"
+        x = -9.69905341387
+        y = 42.5007010073
+        interface = R4 f1/2
+    [[NOTE 76]]
+        text = "f0/0"
+        x = 68.3074507613
+        y = 47.3276882959
+        interface = R19 f0/0
+    [[NOTE 77]]
+        text = "f0/0"
+        x = -3.67368045457
+        y = 64.0176019209
+        interface = R18 f0/0
+    [[NOTE 78]]
+        text = "f0/0"
+        x = 72.6279794836
+        y = -0.328598065676
+        interface = R11 f0/0
+    [[NOTE 79]]
+        text = "f0/0"
+        x = 70.6885945573
+        y = 41.4008926445
+        interface = R10 f0/0
+    [[NOTE 80]]
+        text = "f0/0"
+        x = 55.3175898905
+        y = -3.35357806375
+        interface = R13 f0/0
+    [[NOTE 81]]
+        text = "f0/0"
+        x = 65.3253350299
+        y = 52.3582015954
+        interface = R12 f0/0
+    [[NOTE 82]]
+        text = "f0/0"
+        x = -56.6392354441
+        y = 8.19774813398
+        interface = R15 f0/0
+    [[NOTE 83]]
+        text = "f0/0"
+        x = 67.6990534139
+        y = 10.4992989927
+        interface = R14 f0/0
+    [[NOTE 84]]
+        text = "f0/0"
+        x = -64.8061779532
+        y = 16.7370879687
+        interface = R17 f0/0
+    [[NOTE 85]]
+        text = "f0/0"
+        x = 69.9813729589
+        y = 15.5305089171
+        interface = R16 f0/0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -171.119841047
+        y = 179.605122421
+        width = 229.102597104
+        height = 81.1370849898
+        border_style = 2
+    [[SHAPE 2]]
+        type = ellipse
+        x = 287.0
+        y = -212.0
+        width = 116.0
+        height = 200.0
+        border_style = 2

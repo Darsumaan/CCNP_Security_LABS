@@ -1,0 +1,361 @@
+autostart = False
+version = 0.8.6
+[127.0.0.1:7202]
+    workingdir = c:\users\hp\appdata\local\temp\GNS3_bf6aeb\working
+    udp = 10201
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R5]]
+        console = 2105
+        aux = 2505
+        cnfg = configs\R5.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW24 2
+        x = -812.010101268
+        y = -40.9898987322
+        z = 1.0
+    [[ROUTER R6]]
+        console = 2106
+        aux = 2506
+        cnfg = configs\R6.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW25 3
+        x = 338.0
+        y = 292.0
+        z = 1.0
+[127.0.0.1:7203]
+    workingdir = c:\users\hp\appdata\local\temp\GNS3_bf6aeb\working
+    udp = 10301
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R7]]
+        console = 2107
+        aux = 2507
+        cnfg = configs\R7.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW25 4
+        x = 706.989898732
+        y = 291.989898732
+        z = 1.0
+    [[ROUTER R8]]
+        console = 2108
+        aux = 2508
+        cnfg = configs\R8.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW25 2
+        x = 874.0
+        y = -72.0
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = c:\users\hp\appdata\local\temp\GNS3_bf6aeb\working
+    udp = 10001
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2101
+        aux = 2501
+        cnfg = configs\R1.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW24 3
+        x = -790.0
+        y = 194.0
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2102
+        aux = 2502
+        cnfg = configs\R2.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW24 4
+        x = -603.0
+        y = 281.0
+        z = 1.0
+    [[ETHSW SW24]]
+        1 = dot1q 1 PIX1 e0
+        2 = access 10 R5 f1/0
+        3 = access 20 R1 f1/0
+        4 = access 20 R2 f1/0
+        5 = access 30 R3 f1/0
+        6 = access 30 R4 f1/0
+        x = -363.5
+        y = 11.0
+        z = 1.0
+        hx = -22.5
+        hy = 457.0
+    [[ETHSW SW25]]
+        1 = dot1q 1 PIX1 e1
+        2 = access 60 R8 f1/0
+        3 = access 40 R6 f1/0
+        4 = access 50 R7 f1/0
+        x = 290.5
+        y = 8.0
+        z = 1.0
+        hx = -367.5
+        hy = 497.0
+    [[ETHSW SW3]]
+        2 = access 1 PIX1 e3
+        3 = access 1 R9 f1/0
+        x = -87.9703920951
+        y = -194.368543435
+        z = 1.0
+        hx = -188.485281374
+        hy = 675.029437252
+[127.0.0.1:7201]
+    workingdir = c:\users\hp\appdata\local\temp\GNS3_bf6aeb\working
+    udp = 10101
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        console = 2104
+        aux = 2504
+        cnfg = configs\R4.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW24 6
+        x = -83.0
+        y = 214.0
+        z = 1.0
+    [[ROUTER R3]]
+        console = 2103
+        aux = 2503
+        cnfg = configs\R3.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW24 5
+        x = -365.989898732
+        y = 287.010101268
+        z = 1.0
+        hx = -29.0
+        hy = -31.0
+[127.0.0.1:7204]
+    workingdir = c:\users\hp\appdata\local\temp\GNS3_bf6aeb\working
+    udp = 10401
+    [[7200]]
+        image = C:\Users\HP\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        idlepc = 0x60794fcc
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R9]]
+        console = 2109
+        aux = 2509
+        cnfg = configs\R9.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = SW3 3
+        x = -86.9898987322
+        y = -405.010101268
+        z = 1.0
+[qemu 127.0.0.1:10525]
+    workingdir = qemu-flash-drives
+    udp = 40000
+    qemupath = qemu.exe
+    qemuimgpath = qemu-img.exe
+    [[525]]
+        image = C:\Users\HP\Downloads\FIREWALL\pix803.bin
+        ram = 128
+        netcard = e1000
+        serial = 0x301D10D9
+        key = 0x5236f5a7,0x97def6da,0x732a91f5,0xf5deef57
+    [[PIX PIX1]]
+        e0 = SW24 1
+        e1 = SW25 1
+        e3 = SW3 2
+        x = -82.0
+        y = -37.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    m11 = 1.0
+    m22 = 1.0
+    [[NOTE 1]]
+        text = "inside-2\n172.17.0.0/16\ndnat 167.19.0.1-10"
+        x = -267.0
+        y = 278.0
+    [[NOTE 2]]
+        text = "vlan60"
+        x = 588.0
+        y = -86.0
+    [[NOTE 3]]
+        text = "vlan50"
+        x = 704.0
+        y = 338.0
+    [[NOTE 4]]
+        text = "vlan40"
+        x = 331.0
+        y = 343.0
+    [[NOTE 5]]
+        text = "vlan30"
+        x = -388.0
+        y = 337.0
+    [[NOTE 6]]
+        text = "vlan20"
+        x = -809.0
+        y = 303.0
+    [[NOTE 7]]
+        text = "vlan10"
+        x = -668.0
+        y = -50.0
+    [[NOTE 8]]
+        text = "inside-2\n192.168.11.0/29\ndnat 190.45.0.1-10"
+        x = 504.0
+        y = 85.0
+    [[NOTE 9]]
+        text = "inside-1\n192.168.10.0/29\ndnat 188.32.0.1-10"
+        x = 166.0
+        y = 136.0
+    [[NOTE 10]]
+        text = "inside-1\n172.16.0.0/16\ndnat 166.18.0.1-10"
+        x = -729.0
+        y = 64.0
+    [[NOTE 11]]
+        text = "outside c1/c2\n200.0.0.16/28"
+        x = 16.0
+        y = -198.0
+    [[NOTE 12]]
+        text = "DMZ 192.168.78.0/30"
+        x = -671.0
+        y = -81.0
+    [[NOTE 13]]
+        text = "DMZ 192.168.89.4/30"
+        x = 457.0
+        y = -52.0
+    [[NOTE 14]]
+        text = "4"
+        x = 68.8438135246
+        y = 38.0950243186
+        interface = SW25 4
+    [[NOTE 15]]
+        text = "3"
+        x = 42.0992223527
+        y = 55.4518727609
+        interface = SW25 3
+    [[NOTE 16]]
+        text = "2"
+        x = 87.9789206041
+        y = -28.4354353336
+        interface = SW25 2
+    [[NOTE 17]]
+        text = "1"
+        x = -48.0894670413
+        y = -29.7161262573
+        interface = SW25 1
+    [[NOTE 18]]
+        text = "6"
+        x = 65.9282392751
+        y = 41.9638644007
+        interface = SW24 6
+    [[NOTE 19]]
+        text = "5"
+        x = 14.2469913535
+        y = 59.8675047469
+        interface = SW24 5
+    [[NOTE 20]]
+        text = "4"
+        x = -23.3607769896
+        y = 42.6394780574
+        interface = SW24 4
+    [[NOTE 21]]
+        text = "3"
+        x = -32.9951284811
+        y = 11.3739304123
+        interface = SW24 3
+    [[NOTE 22]]
+        text = "2"
+        x = -44.4326917629
+        y = -22.3195104153
+        interface = SW24 2
+    [[NOTE 23]]
+        text = "1"
+        x = 75.2363574348
+        y = 11.4150356806
+        interface = SW24 1
+    [[NOTE 24]]
+        text = "e1"
+        x = 72.5894670413
+        y = 27.7161262573
+        interface = PIX1 e1
+    [[NOTE 25]]
+        text = "e0"
+        x = -6.73635743485
+        y = 26.5849643194
+        interface = PIX1 e0
+    [[NOTE 26]]
+        text = "e3"
+        x = 53.151610635
+        y = -39.8847883514
+        interface = PIX1 e3
+    [[NOTE 27]]
+        text = "3"
+        x = 35.2029997686
+        y = -23.9988973706
+        interface = SW3 3
+    [[NOTE 28]]
+        text = "2"
+        x = 31.3506448673
+        y = 56.0971676304
+        interface = SW3 2
+    [[NOTE 29]]
+        text = "f1/0"
+        x = 33.2970002314
+        y = 61.9988973706
+        interface = R9 f1/0
+    [[NOTE 30]]
+        text = "f1/0"
+        x = -54.4789206041
+        y = 31.4354353336
+        interface = R8 f1/0
+    [[NOTE 31]]
+        text = "f1/0"
+        x = -65.3438135246
+        y = -13.0950243186
+        interface = R7 f1/0
+    [[NOTE 32]]
+        text = "f1/0"
+        x = 45.4007776473
+        y = -47.4518727609
+        interface = R6 f1/0
+    [[NOTE 33]]
+        text = "f1/0"
+        x = 72.9326917629
+        y = 24.3195104153
+        interface = R5 f1/0
+    [[NOTE 34]]
+        text = "f1/0"
+        x = 2.57176072494
+        y = -3.96386440073
+        interface = R4 f1/0
+    [[NOTE 35]]
+        text = "f1/0"
+        x = 35.2530086465
+        y = -30.8675047469
+        interface = R3 f1/0
+    [[NOTE 36]]
+        text = "f1/0"
+        x = 59.8607769896
+        y = -7.63947805744
+        interface = R2 f1/0
+    [[NOTE 37]]
+        text = "f1/0"
+        x = 69.4951284811
+        y = 5.62606958771
+        interface = R1 f1/0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -419.0
+        y = 192.0
+        width = 425.0
+        height = 177.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -832.0
+        y = 173.0
+        width = 354.0
+        height = 171.0

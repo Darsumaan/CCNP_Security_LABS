@@ -1,0 +1,341 @@
+autostart = False
+version = 0.8.6
+[127.0.0.1:7202]
+    workingdir = C:\Users\anans\AppData\Local\Temp
+    udp = 10201
+    [[3745]]
+        image = C:\Users\anans\OneDrive\Desktop\gns\c3745-advipservicesk9-mz.124-25d.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R9]]
+        model = 3745
+        console = 2108
+        aux = 2509
+        cnfg = configs\R9.cfg
+        f0/0 = R3 f1/3
+        symbol = computer
+        x = 176.0
+        y = -190.0
+        z = 1.0
+    [[ROUTER R10]]
+        model = 3745
+        console = 2109
+        aux = 2510
+        cnfg = configs\R10.cfg
+        f0/0 = R3 f1/4
+        symbol = computer
+        x = 475.0
+        y = -205.0
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = C:\Users\anans\AppData\Local\Temp
+    udp = 10001
+    [[3745]]
+        image = C:\Users\anans\OneDrive\Desktop\gns\c3745-advipservicesk9-mz.124-25d.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        model = 3745
+        console = 2103
+        aux = 2504
+        cnfg = configs\R4.cfg
+        slot1 = NM-16ESW
+        f1/0 = R3 f1/0
+        f1/1 = R3 f1/1
+        symbol = EtherSwitch router
+        x = 335.5
+        y = 304.5
+        z = 1.0
+        hx = 8.5
+        hy = 52.0
+    [[ROUTER R1]]
+        model = 3745
+        console = 2100
+        aux = 2501
+        cnfg = configs\R1.cfg
+        slot1 = NM-16ESW
+        f1/0 = R2 f1/0
+        f1/1 = R2 f1/1
+        f1/2 = R2 f1/2
+        f1/3 = R5 f0/1
+        f1/4 = R7 f0/0
+        f1/5 = R8 f0/0
+        symbol = EtherSwitch router
+        x = -348.5
+        y = -72.5
+        z = 1.0
+        hx = 42.5
+        hy = 48.0
+    [[ROUTER R2]]
+        model = 3745
+        console = 2101
+        aux = 2502
+        cnfg = configs\R2.cfg
+        slot1 = NM-16ESW
+        f1/0 = R1 f1/0
+        f1/1 = R1 f1/1
+        f1/2 = R1 f1/2
+        symbol = EtherSwitch router
+        x = -349.5
+        y = 290.5
+        z = 1.0
+        hx = 4.5
+        hy = 53.0
+    [[ROUTER R3]]
+        model = 3745
+        console = 2102
+        aux = 2503
+        cnfg = configs\R3.cfg
+        slot1 = NM-16ESW
+        f1/0 = R4 f1/0
+        f1/1 = R4 f1/1
+        f1/2 = R6 f0/1
+        f1/3 = R9 f0/0
+        f1/4 = R10 f0/0
+        symbol = EtherSwitch router
+        x = 339.5
+        y = -98.5
+        z = 1.0
+        hx = 50.5
+        hy = 23.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\anans\AppData\Local\Temp
+    udp = 10101
+    [[3745]]
+        image = C:\Users\anans\OneDrive\Desktop\gns\c3745-advipservicesk9-mz.124-25d.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R5]]
+        model = 3745
+        console = 2104
+        aux = 2505
+        cnfg = configs\R5.cfg
+        f0/0 = R6 f0/0
+        f0/1 = R1 f1/3
+        x = -362.0
+        y = -324.0
+        z = 1.0
+    [[ROUTER R6]]
+        model = 3745
+        console = 2105
+        aux = 2506
+        cnfg = configs\R6.cfg
+        f0/0 = R5 f0/0
+        f0/1 = R3 f1/2
+        x = 327.0
+        y = -322.0
+        z = 1.0
+    [[ROUTER R7]]
+        model = 3745
+        console = 2106
+        aux = 2507
+        cnfg = configs\R7.cfg
+        f0/0 = R1 f1/4
+        symbol = computer
+        x = -479.0
+        y = -196.0
+        z = 1.0
+    [[ROUTER R8]]
+        model = 3745
+        console = 2107
+        aux = 2508
+        cnfg = configs\R8.cfg
+        f0/0 = R1 f1/5
+        symbol = computer
+        x = -225.0
+        y = -196.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "VLAN 150"
+        x = -235.0
+        y = 304.0
+    [[NOTE 2]]
+        text = "VLAN 140"
+        x = -543.0
+        y = 312.0
+        color = "#ff0000"
+    [[NOTE 3]]
+        text = "VLAN 150"
+        x = -206.0
+        y = -58.0
+        color = "#ff0000"
+    [[NOTE 4]]
+        text = "VLAN 140"
+        x = -555.0
+        y = -53.0
+    [[NOTE 5]]
+        text = "/30 = 255.255.255.252\n/29 = 255.255.255.248"
+        x = -863.0
+        y = -195.0
+    [[NOTE 6]]
+        text = "RIP"
+        x = -7.0
+        y = -302.0
+    [[NOTE 7]]
+        text = "200.0.0.4/30"
+        x = -50.0
+        y = -330.0
+    [[NOTE 8]]
+        text = "VLAN 140 = 192.168.140.0/24 = EIGRP 140\nVLAN 150 = 192.168.150.0/24 = OSPF 150\nVLAN 210 = 172.23.0.0/16 = EIGRP 123\nVLAN 211 = 172.25.0.24/29 = EIGRP 172"
+        x = -901.0
+        y = -345.0
+    [[NOTE 9]]
+        text = "2RP"
+        x = -510.0
+        y = 238.0
+    [[NOTE 10]]
+        text = "RP"
+        x = -503.0
+        y = 214.0
+    [[NOTE 11]]
+        text = "VLAN 210"
+        x = 145.0
+        y = 271.0
+    [[NOTE 12]]
+        text = "2RP"
+        x = -505.0
+        y = 14.0
+    [[NOTE 13]]
+        text = "RP"
+        x = 394.0
+        y = 289.0
+    [[NOTE 14]]
+        text = "VLAN 211"
+        x = 474.0
+        y = 268.0
+    [[NOTE 15]]
+        text = "VLAN 210"
+        x = 156.0
+        y = 7.0
+        color = "#ff0000"
+    [[NOTE 16]]
+        text = "RP"
+        x = -493.0
+        y = -8.0
+    [[NOTE 17]]
+        text = "VLAN 211"
+        x = 488.0
+        y = 11.0
+        color = "#ff0000"
+    [[NOTE 18]]
+        text = "f0/0"
+        x = -0.1882476316
+        y = 52.5538167507
+        interface = R10 f0/0
+    [[NOTE 19]]
+        text = "f0/0"
+        x = 69.6029570401
+        y = 11.6776538462
+        interface = R9 f0/0
+    [[NOTE 20]]
+        text = "f0/0"
+        x = -56.6576274883
+        y = 30.9561013784
+        interface = R8 f0/0
+    [[NOTE 21]]
+        text = "f1/4"
+        x = 72.1882476316
+        y = -5.55381675071
+        interface = R3 f1/4
+    [[NOTE 22]]
+        text = "f1/3"
+        x = -65.6029570401
+        y = -5.67765384617
+        interface = R3 f1/3
+    [[NOTE 23]]
+        text = "f1/2"
+        x = 25.6113305086
+        y = -53.4901271133
+        interface = R3 f1/2
+    [[NOTE 24]]
+        text = "f1/1"
+        x = 41.1032434963
+        y = 58.4484044643
+        interface = R3 f1/1
+    [[NOTE 25]]
+        text = "f1/0"
+        x = -65.8970027773
+        y = 60.4980298114
+        interface = R3 f1/0
+    [[NOTE 26]]
+        text = "f1/2"
+        x = -115.389788608
+        y = -51.5136222725
+        interface = R2 f1/2
+    [[NOTE 27]]
+        text = "f1/1"
+        x = -115.389826553
+        y = -72.4860741677
+        interface = R2 f1/1
+    [[NOTE 28]]
+        text = "f1/0"
+        x = -118.389807581
+        y = -97.4998482201
+        interface = R2 f1/0
+    [[NOTE 29]]
+        text = "f1/5"
+        x = 62.2261019907
+        y = -7.26488110269
+        interface = R1 f1/5
+    [[NOTE 30]]
+        text = "f1/2"
+        x = -109.610173447
+        y = 117.486074168
+        interface = R1 f1/2
+    [[NOTE 31]]
+        text = "f1/1"
+        x = -107.610211392
+        y = 86.5136222725
+        interface = R1 f1/1
+    [[NOTE 32]]
+        text = "f1/0"
+        x = -106.610192419
+        y = 59.4998482201
+        interface = R1 f1/0
+    [[NOTE 33]]
+        text = "f1/4"
+        x = -62.4794642826
+        y = -22.0715550866
+        interface = R1 f1/4
+    [[NOTE 34]]
+        text = "f1/3"
+        x = 23.5516500476
+        y = -52.4887563243
+        interface = R1 f1/3
+    [[NOTE 35]]
+        text = "f0/0"
+        x = 73.7243303532
+        y = 41.9644438583
+        interface = R7 f0/0
+    [[NOTE 36]]
+        text = "f0/1"
+        x = 48.8886694914
+        y = 48.9901271133
+        interface = R6 f0/1
+    [[NOTE 37]]
+        text = "f0/0"
+        x = -54.999831481
+        y = 26.8838901844
+        interface = R6 f0/0
+    [[NOTE 38]]
+        text = "f0/1"
+        x = 33.9483499524
+        y = 61.9887563243
+        interface = R5 f0/1
+    [[NOTE 39]]
+        text = "f0/0"
+        x = 72.999831481
+        y = 22.1161098156
+        interface = R5 f0/0
+    [[NOTE 40]]
+        text = "f1/1"
+        x = 42.8972490509
+        y = -38.5476551586
+        interface = R4 f1/1
+    [[NOTE 41]]
+        text = "f1/0"
+        x = -48.1029972227
+        y = -35.4980298114
+        interface = R4 f1/0

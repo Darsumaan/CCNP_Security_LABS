@@ -1,0 +1,86 @@
+autostart = False
+version = 0.8.6
+[127.0.0.1:7200]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10001
+    [[7200]]
+        image = C:\Users\hp\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2101
+        aux = 2501
+        cnfg = configs\R1.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = Isp f1/0
+        x = -350.0
+        y = -142.0
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2102
+        aux = 2502
+        cnfg = configs\R2.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = Isp f1/1
+        x = 419.5
+        y = -140.932667397
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10101
+    [[7200]]
+        image = C:\Users\hp\Downloads\gns\c7200-a3jk9s-mz.124-25g.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER Isp]]
+        console = 2103
+        aux = 2503
+        cnfg = configs\Isp.cfg
+        slot1 = PA-2FE-TX
+        f1/0 = R1 f1/0
+        f1/1 = R2 f1/0
+        x = 56.5
+        y = -146.067332603
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "190.1.0.0/30"
+        x = -204.0
+        y = -201.0
+    [[NOTE 2]]
+        text = "190.1.0.4/30"
+        x = 178.0
+        y = -201.0
+    [[NOTE 3]]
+        text = "172.16.0.0/16\n172.17.0.0/16\n172.18.0.0/16"
+        x = 492.0
+        y = -164.0
+    [[NOTE 4]]
+        text = "GRE-TUNNEL= 10.0.0.0/8 ( EIGRP-192)"
+        x = -42.0
+        y = -11.0
+    [[NOTE 5]]
+        text = "192.168.1.0/24\n192.168.2.0/24\n192.168.3.0/24"
+        x = -516.0
+        y = -156.0
+    [[NOTE 6]]
+        text = "f1/0"
+        x = -53.9959989328
+        y = 23.434253267
+        interface = R2 f1/0
+    [[NOTE 7]]
+        text = "f1/0"
+        x = 72.9979978544
+        y = 21.5997905026
+        interface = R1 f1/0
+    [[NOTE 8]]
+        text = "f1/1"
+        x = 72.9959989328
+        y = 22.565746733
+        interface = Isp f1/1
+    [[NOTE 9]]
+        text = "f1/0"
+        x = -53.9979978544
+        y = 23.4002094974
+        interface = Isp f1/0

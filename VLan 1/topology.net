@@ -1,0 +1,181 @@
+autostart = False
+version = 0.8.6
+[127.0.0.1:7202]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10201
+    [[3745]]
+        image = C:\Users\HP\Downloads\gns\c3745-adventerprisek9-mz.124-25d.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R9]]
+        model = 3745
+        console = 2109
+        aux = 2509
+        cnfg = configs\R9.cfg
+        slot1 = NM-16ESW
+        f1/0 = R3 f0/1
+        f1/1 = R4 f0/1
+        f1/2 = R5 f0/1
+        f1/3 = R6 f0/1
+        f1/4 = R7 f0/1
+        f1/5 = R8 f0/1
+        f1/6 = R1 f0/0
+        f1/7 = R1 f0/1
+        f1/8 = R1 f1/0
+        f1/9 = R2 f0/0
+        f1/10 = R2 f0/1
+        f1/11 = R2 f1/0
+        f1/12 = R2 f2/0
+        symbol = EtherSwitch router
+        x = -60.5
+        y = 124.5
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10001
+    [[3745]]
+        image = C:\Users\HP\Downloads\gns\c3745-adventerprisek9-mz.124-25d.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        model = 3745
+        console = 2104
+        aux = 2504
+        cnfg = configs\R4.cfg
+        f0/1 = R9 f1/1
+        symbol = computer
+        x = -690.0
+        y = 284.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3745
+        console = 2101
+        aux = 2501
+        cnfg = configs\R1.cfg
+        f0/0 = R9 f1/6
+        f0/1 = R9 f1/7
+        slot1 = NM-1FE-TX
+        f1/0 = R9 f1/8
+        x = -437.0
+        y = -227.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3745
+        console = 2102
+        aux = 2502
+        cnfg = configs\R2.cfg
+        f0/0 = R9 f1/9
+        f0/1 = R9 f1/10
+        slot1 = NM-1FE-TX
+        f1/0 = R9 f1/11
+        slot2 = NM-1FE-TX
+        f2/0 = R9 f1/12
+        x = 399.0
+        y = -236.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3745
+        console = 2103
+        aux = 2503
+        cnfg = configs\R3.cfg
+        f0/1 = R9 f1/0
+        symbol = computer
+        x = -721.0
+        y = 150.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\HP\AppData\Local\Temp
+    udp = 10101
+    [[3745]]
+        image = C:\Users\HP\Downloads\gns\c3745-adventerprisek9-mz.124-25d.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R5]]
+        model = 3745
+        console = 2105
+        aux = 2505
+        cnfg = configs\R5.cfg
+        f0/1 = R9 f1/2
+        symbol = computer
+        x = -556.0
+        y = 400.0
+        z = 1.0
+        hx = -32.0
+        hy = 23.0
+    [[ROUTER R6]]
+        model = 3745
+        console = 2106
+        aux = 2506
+        cnfg = configs\R6.cfg
+        f0/1 = R9 f1/3
+        symbol = computer
+        x = 670.0
+        y = 351.0
+        z = 1.0
+    [[ROUTER R7]]
+        model = 3745
+        console = 2107
+        aux = 2507
+        cnfg = configs\R7.cfg
+        f0/1 = R9 f1/4
+        symbol = computer
+        x = 734.0
+        y = 218.0
+        z = 1.0
+    [[ROUTER R8]]
+        model = 3745
+        console = 2108
+        aux = 2508
+        cnfg = configs\R8.cfg
+        f0/1 = R9 f1/5
+        symbol = computer
+        x = 739.0
+        y = 98.0
+        z = 1.0
+        hx = 12.0
+        hy = -31.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "172.16.0.0/16"
+        x = 379.0
+        y = 82.0
+    [[NOTE 2]]
+        text = "192.168.103.0/24\n172.16.0.0/16\n172.17.0.0/16\n10.0.0.0/8"
+        x = 560.0
+        y = -167.0
+        font = "MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"
+    [[NOTE 3]]
+        text = "192.168.101.0/24\n192.192.102.0/24\n192.168.103.0/24"
+        x = -800.0
+        y = -175.0
+        font = "MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"
+    [[NOTE 4]]
+        text = "172.17.0.0/16"
+        x = 394.0
+        y = 141.0
+        rotate = 10
+    [[NOTE 5]]
+        text = "192.168.101.0/24"
+        x = -520.0
+        y = 100.0
+        rotate = -5
+    [[NOTE 6]]
+        text = "192.168.103.0/24"
+        x = -456.0
+        y = 325.0
+        rotate = -35
+    [[NOTE 7]]
+        text = "10.0.0.0/8"
+        x = 416.0
+        y = 210.0
+        rotate = 25
+    [[NOTE 8]]
+        text = "VLAN 101: 192.168.101.0/24\nVLAN 102: 192.168.102.0/24\nVLAN 103: 192.168.103.0/24\nEIGRP 165\n\nVLAN 104: 172.16.0.0/16\nRIP\n\nVLAN 105: 172.17.0.0/16\nVLAN 106: 10.0.0.0/8\nOSPF"
+        x = -180.0
+        y = -283.0
+    [[NOTE 9]]
+        text = "192.168.102.0/24"
+        x = -597.0
+        y = 200.0
+        rotate = -5
